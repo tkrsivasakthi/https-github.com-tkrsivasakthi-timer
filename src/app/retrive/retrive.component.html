@@ -1,0 +1,35 @@
+<p>retrive form!</p>
+<div class="container">
+  <div class="jumbotron">
+    <div>
+      <label>Enter Id</label>
+      <input
+        type="text"
+        class="form-control col-md-4"
+        [(ngModel)]="user.id"
+        name="id"
+      />
+    </div>
+    <input
+      type="button"
+      (click)="retrive(user)"
+      class="btn btn-success"
+      value="Get data"
+    />
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <img
+        class="img-rounded"
+        src="{{ this.image }}"
+        alt="Card image cap"
+        width="304"
+        height="236"
+      />
+      <h5 class="card-title">User Id:{{ this.res.data.id }}</h5>
+      <p class="card-text">First Name :{{ this.res.data.first_name }}</p>
+      <p class="card-text">First Name :{{ this.res.data.last_name }}</p>
+    </div>
+  </div>
+</div>

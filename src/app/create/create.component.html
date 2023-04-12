@@ -1,0 +1,18 @@
+<p>
+create form!
+</p>
+<div class="container">  
+  <div class="jumbotron">  
+    <form (ngSubmit)="register(newform)" #newform="ngForm">
+    <div>
+      <label>Name</label>
+      <input type="text" class="form-control col-md-4" [(ngModel)]="newform.name" name="name">
+    </div>
+    <div>
+      <label>Job</label>
+      <input type="text" class="form-control col-md-4" [(ngModel)]="newform.job" name="job">
+    </div>
+<button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+</div>  
